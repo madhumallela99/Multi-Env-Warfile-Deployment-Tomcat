@@ -13,9 +13,9 @@ pipeline {
         WAR_NAME = "simple-app.war"
         TOMCAT_PATH = "/opt/tomcat/webapps"
 
-        DEV_SERVER  = "ec2-user@DEV_IP"
-        QA_SERVER   = "ec2-user@QA_IP"
-        PROD_SERVER = "ec2-user@PROD_IP"
+        DEV_SERVER  = "ec2-user@172.31.0.125"
+        QA_SERVER   = "ec2-user@172.31.11.120"
+        PROD_SERVER = "ec2-user@172.31.5.189"
     }
 
     stages {
@@ -24,7 +24,7 @@ pipeline {
             steps {
                 echo "Checking out branch: ${params.BRANCH_NAME}"
                 git branch: "${params.BRANCH_NAME}",
-                    url: "https://github.com/your-repo/simple-war-app.git"
+                    url: "https://github.com/madhumallela99/Multi-Env-Warfile-Deployment-Tomcat.git"
             }
         }
 
