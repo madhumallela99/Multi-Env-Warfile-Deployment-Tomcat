@@ -1,5 +1,10 @@
 pipeline {
     agent any
+    tools {
+  git 'Default'
+  maven 'maven 3.9.11'
+}
+
 
     parameters {
         string(
